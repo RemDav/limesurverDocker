@@ -9,6 +9,6 @@ RUN mkdir -p /var/www/html/limesurvey && \
     git clone https://github.com/LimeSurvey/LimeSurvey.git && \
     cd LimeSurvey && git checkout ${LIMESURVEY_VERSION} && cd .. && \
     rm -rf /LimeSurvey/.git && \
-    mv LimeSurvey/* /var/www/html/limesurvey && \
+    mv LimeSurvey /var/www/html/limesurvey && \
     chown -R www-data:www-data /var/www/html/limesurvey
 CMD /usr/sbin/apache2ctl -D FOREGROUND
